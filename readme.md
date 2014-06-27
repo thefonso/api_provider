@@ -190,6 +190,8 @@ You will find method, url, body, header, authentication etc fields there, fill i
 View tutorial readme pages / code:
 
 part 1 - [Build an API provider](https://github.com/thefonso/api_provider/)
+
 part 2 - [a REST client for Firefox here](https://github.com/thefonso/api_provider/blob/master/rest_firefox_client.md)
+
 part 3 - [How to build a REST client](https://github.com/thefonso/api_consumer/)
 
