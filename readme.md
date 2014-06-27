@@ -180,7 +180,7 @@ API Requests:
 STEP 5: testing the API
 
 You need to write a REST client to use any API. 
-I have explained [how to do so in this post](https://github.com/thefonso/api_consumer/readme.md).
+I have explained [how to do so in this post](https://github.com/thefonso/api_consumer/blob/master/readme.md).
 
 You may also try it out by installing a REST client in your browser.
 I have explained installing [a REST client for Firefox here](rest_firefox_client.md).
