@@ -1,4 +1,5 @@
-#API tutorial - build an api provider app
+#API tutorial - build an api provider app 
+(part 1)
 
 **What is an API?**
 
@@ -109,11 +110,10 @@ STEP 3 : generating the users controller
         end
       end
     end
-    
-STEP 4 : creating API Documentation
 
 With step 3, your API is ready. But how will others use it? You need to tell them how so let's document the API.
 
+STEP 4 : creating API Documentation
 
 API USAGE DOCUMENT
 ___________________________________________________________________
@@ -183,7 +183,13 @@ You need to write a REST client to use any API.
 I have explained [how to do so in this post](https://github.com/thefonso/api_consumer/blob/master/readme.md).
 
 You may also try it out by installing a REST client in your browser.
-I have explained installing [a REST client for Firefox here](rest_firefox_client.md).
+I have explained installing [a REST client for Firefox here](https://github.com/thefonso/api_provider/blob/master/rest_firefox_client.md).
 
 You will find method, url, body, header, authentication etc fields there, fill in the details from the documentation in step 4 above. On submitting the details, you will get back a response. Hope it works for you and you receive enlighttenment on the basics of understanding API creation :)
+
+View tutorial readme pages / code:
+
+part 1 - [Build an API provider](https://github.com/thefonso/api_provider/)
+part 2 - [a REST client for Firefox here](https://github.com/thefonso/api_provider/blob/master/rest_firefox_client.md)
+part 3 - [How to build a REST client](https://github.com/thefonso/api_consumer/)
 
