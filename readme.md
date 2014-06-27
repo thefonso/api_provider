@@ -180,8 +180,10 @@ API Requests:
 STEP 5: testing the API
 
 You need to write a REST client to use any API. 
-I have explained how to do so in this post. 
-You may also try it out by Installing any REST client in your browser.
+I have explained [how to do so in this post](https://github.com/thefonso/api_consumer).
+
+You may also try it out by installing a REST client in your browser.
 I have explained installing [a REST client for Firefox here](rest_firefox_client.md).
 
 You will find method, url, body, header, authentication etc fields there, fill in the details from the documentation in step 4 above. On submitting the details, you will get back a response. Hope it works for you and you receive enlighttenment on the basics of understanding API creation :)
+
