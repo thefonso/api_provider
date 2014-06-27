@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
   http_basic_authenticate_with :name => "thefonso", :password => "rebelbase"
   
-  skip_before_filter :authenticate_user! # we do not need authentication here
+  
   before_filter :fetch_user, :except => [:index, :create]
   
   def fetch_user
