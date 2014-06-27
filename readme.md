@@ -19,7 +19,7 @@ STEP 1: writing the routes
     end
 
 I have put the routes, within api **namespace**, in this way, it will not conflict with users controller of your actual application, 
-if you have one. If you do not have any, you can simply use  **resources :users, :defaults => { :format => 'xml' }** , but I suggest to always use a namespace and group all the controllers related to your API in the "api" folder inside your app/controllers directory only.
+if you have one. If you do not have any, you can simply use  **resources :users, :defaults => { :format => 'json' }** , but I suggest to always use a namespace and group all the controllers related to your API in the "api" folder inside your app/controllers directory only.
 
 Also, I have set the default **:format** here as **json** . If you do not set it, rails will consider it as an html request if the user does not pass any format. Now from the command line type the following
 
