@@ -13,6 +13,26 @@ Put in simple words an "API is a program which lets the user use methods of your
 
 => An API does not have any user interface like navigation links or forms to fill out by the user etc. For an API you need to document how it works so that a third party can use it easily. I will write the documentation for the API we create here in STEP 4
 
+STEP 0: setting things up
+
+we are going to build this out with a Rails 3 app with postgres and no test framework (I prefer rspec)
+
+    rails __3.2.13__ new api_providerdemo -T -d=postgresql
+
+next let's add some useful gems to our gemfile...
+
+    group :development, :test do
+        gem 'better_errors'
+        gem 'pry-rails'
+        gem 'binding_of_caller'
+    end
+
+open database.yml 
+
+remove the username under development, test and production and back at the command line do the useuall rake db:create, migrate etc.
+
+open routes.rb
+
 STEP 1: writing the routes
 
     namespace :api do
@@ -24,7 +44,12 @@ if you have one. If you do not have any, you can simply use  **resources :users,
 
 Also, I have set the default **:format** here as **json** . If you do not set it, rails will consider it as an html request if the user does not pass any format. Now from the command line type the following
 
-$ rails generate model User first_name:string last_name:string email:string password:string password_confrimation:string temp_password:string
+    $ rails generate model User first_name:string last_name:string email:string password:string password_confirmation:string temp_password:string
+
+or since :string is the default....
+
+    $ rails generate model User first_name last_name email password password_confirmation temp_password
+
 
 Once done do the normal rake db:create , rake db:migrate and then travel to your model/user.rb file and enter the following...
 
@@ -38,12 +63,12 @@ STEP 2: generating the model
       validates_uniqueness_of :email
     end
 
-Thus in model we have validated email and other things, the user calling our API must provide these things. 
+In model we have validated email and other things, the user calling our API must provide these things. 
 Thus while creating a user the caller must pass :email, :first_name and :last_name. 
 we will generate password dynamically and let the user change it later on.
 
-Note: on line one of our users controller we have "class Api::UsersController". 
-You will need to create an "api" folder inside your app/controllers directory.
+Note: Below on line one of our users controller we have "class Api::UsersController". 
+You will need to create an "api" folder like so... app/controllers/api/users_controller.rb directory.
 
 STEP 3 : generating the users controller
 
@@ -194,4 +219,3 @@ part 1 - [Build an API provider](https://github.com/thefonso/api_provider/)
 part 2 - [a REST client for Firefox here](https://github.com/thefonso/api_provider/blob/master/rest_firefox_client.md)
 
 part 3 - [How to build a REST client](https://github.com/thefonso/api_consumer/)
-
