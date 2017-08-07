@@ -13,6 +13,9 @@ Put in simple words an "API is a program which lets the user use methods of your
 
 => An API does not have any user interface like navigation links or forms to fill out by the user etc. For an API you need to document how it works so that a third party can use it easily. I will write the documentation for the API we create here in STEP 4
 
+<<<<<<< HEAD
+**STEP 1: writing the routes**
+=======
 STEP 0: setting things up
 
 we are going to build this out with a Rails 3 app with postgres and no test framework (I prefer rspec)
@@ -34,6 +37,7 @@ remove the username under development, test and production and back at the comma
 open routes.rb
 
 STEP 1: writing the routes
+>>>>>>> 4f8e8049245c54c61ec90dcd7f846fe7dfe67217
 
     namespace :api do
     	resources :users, :defaults => { :format => 'json' }
