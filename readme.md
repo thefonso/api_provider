@@ -1,7 +1,7 @@
-#API tutorial - build an api provider app 
+# API tutorial - build an api provider app 
 (part 1)
 
-**What is an API?**
+## **What is an API?**
 
 Put in simple words an "API is a program which lets the user use methods of your application from outside of the application". I will create a REST API here which will implement a CRUD ( create, read, update, delete ) operation on the users table from outside of the application. I assume you all have implemented CRUD for the user in an application before. The API implementation will remain the same, with a few differences listed below.
 
@@ -13,7 +13,7 @@ Put in simple words an "API is a program which lets the user use methods of your
 
 => An API does not have any user interface like navigation links or forms to fill out by the user etc. For an API you need to document how it works so that a third party can use it easily. I will write the documentation for the API we create here in STEP 4
 
-STEP 1: writing the routes
+**STEP 1: writing the routes**
 
     namespace :api do
     	resources :users, :defaults => { :format => 'json' }
@@ -28,7 +28,7 @@ $ rails generate model User first_name:string last_name:string email:string pass
 
 Once done do the normal rake db:create , rake db:migrate and then travel to your model/user.rb file and enter the following...
 
-STEP 2: generating the model
+**STEP 2: generating the model**
 
     class User < ActiveRecord::Base
       attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, 
@@ -45,7 +45,7 @@ we will generate password dynamically and let the user change it later on.
 Note: on line one of our users controller we have "class Api::UsersController". 
 You will need to create an "api" folder inside your app/controllers directory.
 
-STEP 3 : generating the users controller
+**STEP 3 : generating the users controller**
 
     class Api::UsersController < ApplicationController
       http_basic_authenticate_with :name => "thefonso", :password => "rebelbase"
@@ -113,7 +113,7 @@ STEP 3 : generating the users controller
 
 With step 3, your API is ready. But how will others use it? You need to tell them how so let's document the API.
 
-STEP 4 : creating API Documentation
+**STEP 4 : creating API Documentation**
 
 API USAGE DOCUMENT
 ___________________________________________________________________
@@ -177,7 +177,7 @@ API Requests:
     body : not needed
 </pre>
   
-STEP 5: testing the API
+**STEP 5: testing the API**
 
 You need to write a REST client to use any API. 
 I have explained [how to do so in this post](https://github.com/thefonso/api_consumer/blob/master/readme.md).
