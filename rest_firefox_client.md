@@ -1,8 +1,8 @@
-#API tutorial - using the REST client Firefox plugin
+# API tutorial - using the REST client Firefox plugin
 
 To access any API service, You need to write REST client code in your application. But you can try out any API services in your browser itself. Good REST client tools are available for both Firefox and Chrome. I will explain, installing a tool in Firefox and how to use it.
 
-STEP 1 : Installing the REST client tool
+**STEP 1 : Installing the REST client tool**
 
 => open your Firefox browser
 
@@ -12,7 +12,7 @@ click tool tab at top of browser  -> click **web developer**  from the list -> c
 
 => Once installed, you can see a brown square icon with a circle in it at the top right hand side of the browser. click it to start the tool
 
-STEP 2: Understanding the tool
+**STEP 2: Understanding the tool**
 
 The REST client UI in the browser looks like so...
 
