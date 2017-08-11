@@ -50,7 +50,10 @@ next let's add some useful gems to our gemfile...
 
 open database.yml 
 
-remove the username under development, test and production and back at the command line do the useuall rake db:create, migrate etc.
+remove the username under development, test and production and back at the command line do the usual
+
+	rake db:create 
+	rake db:migrate
 
 open routes.rb
 
