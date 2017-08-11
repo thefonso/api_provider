@@ -15,7 +15,28 @@ Put in simple words an "API is a program which lets the user use methods of your
 
 STEP 0: setting things up
 
-we are going to build this out with a Rails 3 app with postgres and no test framework (I prefer rspec)
+check to see what versions of rails you have installed
+
+	gem list rails --local
+	
+look for something like this
+
+	** LOCAL GEMS **
+	rails (5.1.1, 5.1.0)
+	
+we want to install 4.2.1 and 3.2.13 as well let's start with 4.x
+
+	gem install rails -v '4.2.1' -V --no-ri --no-rdoc
+	
+then again for 3.x
+
+	gem install rails -v '3.2.13' -V --no-ri --no-rdoc
+	
+Now check the install with the gem list command
+
+	gem list rails --local
+
+We are ready now. we are going to build this out with a Rails 3 app with postgres and no test framework (I prefer rspec)
 
     rails __3.2.13__ new api_providerdemo -T -d=postgresql
 
